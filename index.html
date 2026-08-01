@@ -1,110 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Achievements</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Achievements | Arya Raverkar</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,Arial,sans-serif;
+}
 
-        body {
-            background: #f4f7fb;
-            padding: 50px 20px;
-        }
+body{
+    background:#0d1117;
+    color:#e6edf3;
+    overflow-x:hidden;
+}
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-        }
+/* Background */
 
-        h1 {
-            text-align: center;
-            color: #1f2937;
-            margin-bottom: 40px;
-            font-size: 2.2rem;
-        }
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top left,#214f4670,transparent 35%),
+    radial-gradient(circle at bottom right,#274f7070,transparent 35%);
+    z-index:-1;
+}
 
-        .card {
-            background: white;
-            margin-bottom: 25px;
-            padding: 25px;
-            border-left: 6px solid #2563eb;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: 0.3s;
-        }
+.container{
+    width:min(1100px,90%);
+    margin:auto;
+    padding:70px 0;
+}
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
+.title{
+    text-align:center;
+    margin-bottom:60px;
+}
 
-        .card h2 {
-            color: #2563eb;
-            margin-bottom: 8px;
-        }
+.title h1{
+    font-size:3rem;
+    color:#9fd3c7;
+    letter-spacing:2px;
+}
 
-        .card p {
-            color: #666;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
+.title p{
+    margin-top:10px;
+    color:#8b949e;
+    font-size:1.05rem;
+}
 
-        .card ul {
-            padding-left: 20px;
-            line-height: 1.8;
-            color: #333;
-        }
+/* Timeline */
 
-        .card li {
-            margin-bottom: 8px;
-        }
-    </style>
+.timeline{
+    position:relative;
+    margin-top:30px;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:24px;
+    top:0;
+    bottom:0;
+    width:4px;
+    background:linear-gradient(#5aa897,#4d7ea8);
+    border-radius:20px;
+}
+
+.card{
+    position:relative;
+    margin-left:70px;
+    margin-bottom:35px;
+    background:rgba(22,27,34,.75);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:18px;
+    padding:28px;
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#5aa897;
+    box-shadow:0 15px 35px rgba(90,168,151,.18);
+}
+
+.dot{
+    position:absolute;
+    width:18px;
+    height:18px;
+    background:#5aa897;
+    border-radius:50%;
+    left:-55px;
+    top:35px;
+    border:4px solid #0d1117;
+    box-shadow:0 0 15px #5aa897;
+}
+
+.card h2{
+    color:#8bd5ca;
+    margin-bottom:5px;
+}
+
+.role{
+    color:#7fb2d9;
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+ul{
+    padding-left:18px;
+}
+
+li{
+    margin:10px 0;
+    color:#c9d1d9;
+    line-height:1.6;
+}
+
+.badge{
+    display:inline-block;
+    margin-top:18px;
+    background:#1c4336;
+    color:#9fd3c7;
+    padding:7px 14px;
+    border-radius:30px;
+    font-size:.85rem;
+}
+
+footer{
+    text-align:center;
+    color:#6e7681;
+    margin-top:60px;
+    font-size:.9rem;
+}
+
+@media(max-width:700px){
+
+.timeline::before{
+left:12px;
+}
+
+.card{
+margin-left:45px;
+padding:22px;
+}
+
+.dot{
+left:-36px;
+}
+
+.title h1{
+font-size:2.2rem;
+}
+
+}
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-    <h1>Professional Achievements</h1>
+<div class="title">
+<h1>Professional Achievements</h1>
+<p>Leadership • Technical Excellence • Innovation • Research</p>
+</div>
 
-    <div class="card">
-        <h2>TEDxTCET 2026</h2>
-        <p>Speaker Curation & Correspondence Team</p>
+<div class="timeline">
 
-        <ul>
-            <li>Coordinated communication with distinguished speakers and industry professionals.</li>
-            <li>Managed speaker onboarding, schedules, and documentation.</li>
-            <li>Collaborated with multiple teams to ensure successful event execution.</li>
-        </ul>
-    </div>
+<div class="card">
+<div class="dot"></div>
 
-    <div class="card">
-        <h2>Technical Event Leadership</h2>
-        <p>College Technical & Cultural Events</p>
+<h2>Chairperson</h2>
+<p class="role">OpenAI Club • Thakur College of Engineering & Technology</p>
 
-        <ul>
-            <li>Successfully organized and managed large-scale technical and cultural events.</li>
-            <li>Worked with cross-functional teams to coordinate logistics and operations.</li>
-            <li>Demonstrated leadership, teamwork, and communication skills.</li>
-        </ul>
-    </div>
+<ul>
+<li>Leading the OpenAI Club to foster AI education, innovation, and collaborative learning among students.</li>
+<li>Organizing workshops, hackathons, seminars, and technical sessions focused on Artificial Intelligence.</li>
+<li>Mentoring student teams and promoting research-driven AI projects.</li>
+<li>Coordinating with faculty, industry professionals, and club members to build a strong AI community.</li>
+</ul>
 
-    <div class="card">
-        <h2>Academic Excellence</h2>
-        <p>Engineering Student</p>
+<span class="badge">Leadership</span>
 
-        <ul>
-            <li>Maintained a strong academic record with a CGPA of 8.55.</li>
-            <li>Actively engaged in FPGA-based digital design and embedded systems research.</li>
-            <li>Continuously developing expertise in software development and hardware design.</li>
-        </ul>
-    </div>
+</div>
+
+<div class="card">
+<div class="dot"></div>
+
+<h2>TEDxTCET 2026</h2>
+<p class="role">Speaker Curation & Correspondence Team</p>
+
+<ul>
+<li>Managed communication and coordination with distinguished speakers and professionals.</li>
+<li>Assisted in speaker onboarding, scheduling, and event planning.</li>
+<li>Collaborated across multiple teams to ensure successful execution of the TEDx event.</li>
+</ul>
+
+<span class="badge">Event Management</span>
+
+</div>
+
+<div class="card">
+<div class="dot"></div>
+
+<h2>Academic Excellence</h2>
+<p class="role">Electronics & Computer Science Engineering</p>
+
+<ul>
+<li>Achieved a Semester IV CGPA of <strong>9.01/10.00</strong>.</li>
+<li>Actively pursuing FPGA-based research, embedded systems, and AI-driven hardware acceleration.</li>
+<li>Continuously expanding expertise in software development, digital design, and system architecture.</li>
+</ul>
+
+<span class="badge">Academics</span>
+
+</div>
+
+<div class="card">
+<div class="dot"></div>
+
+<h2>Technical Leadership & Innovation</h2>
+<p class="role">Projects • Research • Development</p>
+
+<ul>
+<li>Developed <strong>Language Creeper</strong>, a gamified programming learning platform using Flutter, Node.js, and Firebase.</li>
+<li>Actively involved in FPGA research and digital hardware design for real-world applications.</li>
+<li>Passionate about building scalable software integrated with hardware acceleration.</li>
+</ul>
+
+<span class="badge">Innovation</span>
+
+</div>
+
+</div>
+
+<footer>
+Designed & Developed by Arya Raverkar
+</footer>
 
 </div>
 
